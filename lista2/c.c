@@ -1,3 +1,17 @@
+/*
+Autor: Tomás de Carvalho Coelho, Eng comp, 418391
+
+ALGORITMO
+  DEFINA FATOR_COMISSAO 0.04
+  DECLARE vendas, salario, comissao NUMERICO
+  ESCREVA "Insira seu salario fixo"
+  LEIA salario
+  ESCREVA "Insira suas vendas"
+  LEIA vendas
+  comissao ← vendas * FATOR_COMISSAO
+  ESCREVA "Seu salario final eh de ", comissao + salario, " do qual a comissao eh ", comissao
+FIM_ALGORITMO
+*/
 #include <stdio.h>
 #include <math.h>
 #define FATOR_COMISSAO 0.04

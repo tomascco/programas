@@ -1,3 +1,10 @@
+/*
+Autor: Tomás de Carvalho Coelho, Eng comp, 418391
+
+ALGORITMO
+
+FIM_ALGORITMO
+*/
 #include <stdio.h>
 #include <math.h>
 #define LIMITE_REAJUSTE 900

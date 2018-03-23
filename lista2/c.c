@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #define FATOR_COMISSAO 0.04
+
 int main() {
   float vendas, salario, comissao;
   printf("\nInsira seu salario fixo: ");

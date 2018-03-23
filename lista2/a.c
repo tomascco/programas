@@ -2,6 +2,7 @@
 #include <math.h>
 #define PESO_NOTA1 2
 #define PESO_NOTA2 3
+
 int main() {
   float nota1, nota2;
   printf("\nInsira a nota da primeira prova: ");

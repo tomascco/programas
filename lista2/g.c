@@ -1,3 +1,15 @@
+/*
+Autor: Tomás de Carvalho Coelho, Eng comp, 418391
+
+ALGORITMO
+  DECLARE sal, sal_min NUMERICO
+  ESCREVA "Insira o valor do salario minimo"
+  LEIA sal_min
+  ESCREVA "Insira o valor do salario do funcionario"
+  LEIA sal
+  ESCREVA "O funcionario recebe um salario " , sal / sal_min , "vezes maior que o salario minimo"
+FIM_ALGORITMO
+*/
 #include <stdio.h>
 #include <math.h>
 

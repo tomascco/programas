@@ -12,13 +12,10 @@ int main() {
   int numero;
   printf("Insira um numero: ");
   scanf("%d", &numero);
-  switch (numero % 5) {
-    case 1 ... 4:
-      printf("O numero nao eh divisivel por 5\n");
-      break;
-    default:
-      printf("O numero eh divisivel por 5\n");
-  }
+  if (numero % 5 == 0)
+    printf("O numero eh divisivel por 5\n");
+  else
+    printf("O numero nao eh divisivel por 5\n");
 
 
 

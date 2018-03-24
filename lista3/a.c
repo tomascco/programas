@@ -8,7 +8,7 @@ FIM_ALGORITMO
 #include <stdio.h>
 #include <math.h>
 int main() {
-  float num1, num2, resultado_op;
+  float num1, num2;
   int escolha;
   printf("Digite um numero: ");
   scanf("%f", &num1);

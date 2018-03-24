@@ -33,6 +33,8 @@ int main() {
         case 3:
           printf("Seu grupo de risco eh: 4\n");
           break;
+      }
+      break;
     default:
       if (idade < 20) { // classificacao de pesos dentro do intervalo idade menor que 20
         switch (intervalo) {
@@ -56,10 +58,10 @@ int main() {
             printf("Seu grupo de risco eh: 2\n");
             break;
           case 3:
-          printf("Seu grupo de risco eh 1\n");
+            printf("Seu grupo de risco eh 1\n");
+            break;
         }
       }
     }
-  }
   return 0;
-}
+  }

@@ -22,9 +22,9 @@ int main() {
     printf("A equacao tem raiz com multiplicidade 2 = %.2f\n", raizes);
   }
   else {
-    raizes = (-b + sqrt(delta)) / 2*a;
+    raizes = (-b + sqrt(delta)) / 2*a; // calcula a primeira raiz
     printf("As raizes da equacao sao %.2f", raizes);
-    raizes = (-b - sqrt(delta)) / 2*a;
+    raizes = (-b - sqrt(delta)) / 2*a; // calcula a segunda raiz
     printf("%.2f\n", raizes);
   }
   return 0;

@@ -1,3 +1,2 @@
 # programas
-Alguns exercícios de programação em C feitos por um completo desconhecedor de git e do próprio C.
-e é isso.
+Alguns exercícios de programação em C para estudo e listas de TI0109.

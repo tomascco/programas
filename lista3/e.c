@@ -1,10 +1,3 @@
-/*
-Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-
-ALGORITMO
-
-FIM_ALGORITMO
-*/
 #include <stdio.h>
 #include <math.h>
 #define POUPANCA 1 // rendimento de 10%
@@ -28,7 +21,6 @@ int main() {
       break;
     default:
       printf("A opcao selecionada nao eh valida.\n");
-      break;
   }
 
   return 0;

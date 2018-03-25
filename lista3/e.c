@@ -1,3 +1,17 @@
+/*
+Autor: Tomás de Carvalho Coelho, Eng comp, 418391
+
+ALGORITMO
+DECLARE tipo_invest, valor_invest NUMERICO
+RECEBA tipo_invest, valor_invest
+SE tipo_invest = 1
+  ESCREVA valor_invest * 1.10
+SENÃO SE tipo_invest = 2
+  ESCREVA valor_invest * 1.15
+SENÃO
+  ESCREVA "Escolha uma opção válida"
+FIM_ALGORITMO
+*/
 #include <stdio.h>
 #include <math.h>
 #define POUPANCA 1 // rendimento de 10%

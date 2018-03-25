@@ -2,7 +2,41 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE idade, intervalo, peso NUMERICO
+RECEBA idade, intervalo, peso
+SE peso <= 60
+  intervalo ← 1
+SENÃO SE peso > 60 E peso <= 90
+  intervalo ← 2
+SENÃO
+  intervalo ← 3
+SE idade < 20
+  INCIO
+  SE intervalo = 1
+    ESCREVA "9"
+  SENÃO SE intervalo = 2
+    ESCREVA "8"
+  SENÃO SE intervalo = 3
+    ESCREVA "7"
+  FIM
+SE idade >= 20 E idade <= 50
+  INCIO
+  SE intervalo = 1
+    ESCREVA "6"
+  SENÃO SE intervalo = 2
+    ESCREVA "5"
+  SENÃO SE intervalo = 3
+    ESCREVA "4"
+  FIM
+SE idade > 50
+  INCIO
+  SE intervalo = 1
+    ESCREVA "3"
+  SENÃO SE intervalo = 2
+    ESCREVA "2"
+  SENÃO SE intervalo = 3
+    ESCREVA "1"
+  FIM
 FIM_ALGORITMO
 */
 #include <stdio.h>
@@ -15,37 +49,35 @@ int main() {
   scanf("%d", &idade);             // 3 - acima de 90.
   printf("Entre com seu peso: ");
   scanf("%f", &peso);
-  if (peso < 60) // sequencia de if's para classificar o peso nos intervalos
+  if (peso <= 60) // sequencia de if's para classificar o peso nos intervalos
     intervalo = 1;
-  else if (peso >= 60 && peso <= 90)
+  else if (peso > 60 && peso <= 90)
     intervalo = 2;
   else
     intervalo = 3;
-  switch (idade) { // para as idades sera usado o 'case range'.
-    case 20 ... 50:
+  if (idade < 20) { // teste das idades
       switch (intervalo) { // classificacao dos pesos dentro de cada intervalo de idade O.o
         case 1:
-          printf("Seu grupo de risco eh: 6\n");
+          printf("Seu grupo de risco eh: 9\n");
           break;
         case 2:
-          printf("Seu grupo de risco eh: 5\n");
+          printf("Seu grupo de risco eh: 8\n");
           break;
         case 3:
-          printf("Seu grupo de risco eh: 4\n");
+          printf("Seu grupo de risco eh: 7\n");
           break;
       }
-      break;
-    default:
-      if (idade < 20) { // classificacao de pesos dentro do intervalo idade menor que 20
+  }
+      else if (idade >= 20 && idade <= 50) { // classificacao de pesos dentro do intervalo idade menor que 20
         switch (intervalo) {
           case 1:
-            printf("Seu grupo de risco eh: 9\n");
+            printf("Seu grupo de risco eh: 6\n");
             break;
           case 2:
-            printf("Seu grupo de risco eh: 8\n");
+            printf("Seu grupo de risco eh: 5\n");
             break;
           case 3:
-            printf("Seu grupo de risco eh: 7\n");
+            printf("Seu grupo de risco eh: 4\n");
             break;
         }
       }
@@ -62,6 +94,5 @@ int main() {
             break;
         }
       }
-    }
-  return 0;
+    return 0;
   }

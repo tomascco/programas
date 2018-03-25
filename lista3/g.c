@@ -2,7 +2,20 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE idade NUMERICO
+RECEBA idade
+SE idade < 5
+  ESCREVA "Muito novo"
+SENÃO SE idade >= 5 E idade <= 7
+  ESCREVA "Infantil"
+SENÃO SE idade >=8 E idade <= 10
+  ESCREVA "Infanto-Juvenil"
+SENÃO SE idade >= 11 E idade <= 15
+  ESCREVA "Juvenil"
+SENÃO SE idade >= 16 E <= 30
+  ESCREVA "Adulto"
+SENÃO SE idade > 30
+  ESCREVA "Master"
 FIM_ALGORITMO
 */
 #include <stdio.h>

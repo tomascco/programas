@@ -2,7 +2,15 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE altura NUMERICO
+DECLARE sexo LITERAL
+RECEBA altura, sexo
+SE sexo = 'M'
+  ESCREVA 72.7 * altura - 58
+SENÃO SE sexo = 'F'
+  ESCREVA 62.1 * altura - 44.7
+SENÃO
+  ESCREVA "Escolha uma opcão válida"
 FIM_ALGORITMO
 */
 #include <stdio.h>

@@ -2,7 +2,12 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE ladoA, ladoB, ladoC NUMERICO
+RECEBA ladoA, ladoB, ladoC
+SE ladoA < ladoB + ladoC E ladoB < ladoA + ladoC E ladoC < ladoA + ladoB
+  ESCREVA "Eh um triangulo"
+SENÃO
+  ESCREVA "Nao eh um triangulo"
 FIM_ALGORITMO
 */
 #include <stdio.h>

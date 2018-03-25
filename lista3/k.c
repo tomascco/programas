@@ -2,7 +2,12 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE numero NUMERICO
+RECEBA numero
+SE numero % 5 = 0
+  ESCREVA "O numero eh divisivel de 5"
+SENÃO
+  ESCREVA "o numero nao eh divisivel de 5"
 FIM_ALGORITMO
 */
 #include <stdio.h>

@@ -2,7 +2,12 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE salario NUMERICO
+RECEBA salario
+SE salario < 900
+  ESCREVA salario * 1.3
+SENÃO
+  ESCREVA salario
 FIM_ALGORITMO
 */
 #include <stdio.h>

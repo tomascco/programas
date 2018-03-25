@@ -2,7 +2,20 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE a, b, c, delta, raizes NUMERICO
+RECEBA a, b, c, delta, raizes
+delta ← b * b - 4 * a * c
+SE delta < 0
+  ESCREVA "Não há raizes reais"
+SENÃO SE delta = 0
+  ESCREVA -b / 2 * a
+SENÃO
+  INICIO
+  raizes ← -b + sqrt(delta) / 2a
+  ESCREVA raizes, " "
+  raizes ← -b - sqrt(delta) / 2a
+  ESCREVA raizes
+  FIM
 FIM_ALGORITMO
 */
 #include <stdio.h>

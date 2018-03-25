@@ -2,7 +2,28 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
+RECEBA num1, num2, escolha NUMERICO
+SE escolha = 1
+  ESCREVA (num1+num2) / 2
+SENÃO SE escolha = 2
+INICIO
+  SE num1 > num2
+    ESCREVA num1 - num2
+  SENÃO
+    ESCREVA num2 - num1
+FIM
+SENÃO SE escolha = 3
+  ESCREVA num1 * num2
+SENÃO SE escolha = 4
+INICIO
+    SE num2 = 0
+      ESCREVA "num2 é 0"
+    SENÃO
+      ESCREVA num1 / num2
+FIM
 
+SENÃO
+  ESCREVA "escolha uma opção válida"
 FIM_ALGORITMO
 */
 #include <stdio.h>

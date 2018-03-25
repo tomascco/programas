@@ -2,7 +2,19 @@
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 
 ALGORITMO
-
+DECLARE ladoA, ladoB, ladoC NUMERICO
+RECEBA ladoA, ladoB, ladoC
+SE ladoA < ladoB + ladoC E ladoB < ladoA + ladoC E ladoC < ladoA + ladoB
+  INICIO
+  SE ladoA = ladoB E ladoB = ladoC
+    ESCREVA "O triangulo eh equilatero"
+  SENÃO SE ladoA != ladoB E ladoB != ladoC E ladoA != ladoC
+    ESCREVA "o triangulo eh escaleno"
+  SENÃO
+    ESCREVA "o triangulo eh isosceles"
+  FIM
+SENÃO
+  ESCREVA "Nao eh um triangulo"
 FIM_ALGORITMO
 */
 #include <stdio.h>

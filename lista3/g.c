@@ -31,9 +31,5 @@ int main() {
       else if (idade > 30)
         printf("Sua categoria eh Master\n");
   }
-
-
-
-
   return 0;
 }

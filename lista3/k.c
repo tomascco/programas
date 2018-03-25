@@ -16,8 +16,5 @@ int main() {
     printf("O numero eh divisivel por 5\n");
   else
     printf("O numero nao eh divisivel por 5\n");
-
-
-
   return 0;
 }

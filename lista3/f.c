@@ -21,7 +21,5 @@ int main() {
     printf("Seu peso ideal eh: %.2f\n", 62.1 * altura - 44.7);
   else
     printf("Insira um caractere valido, lembrando de colocar M ou F maiusculas!\n");
-
-
   return 0;
 }

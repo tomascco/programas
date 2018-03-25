@@ -19,6 +19,5 @@ int main() {
     printf("Eh um triangulo mesmo\n");
   else
     printf("nao eh um triangulo, mentiroso.\n");
-
   return 0;
 }

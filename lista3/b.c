@@ -18,7 +18,5 @@ int main() {
     printf("Seu salario reajustado eh: %.2f\n", salario * FATOR_REAJUSTE);
   else
     printf("Seu salario nao sera reajustado e continuara em: %.2f\n", salario);
-
-
   return 0;
 }

@@ -16,6 +16,5 @@ int main() {
     printf("O numero eh multiplo de 3\n");
   else
     printf("O numero nao eh multiplo de 3\n");
-
   return 0;
 }

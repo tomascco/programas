@@ -22,6 +22,5 @@ int main() {
     default:
       printf("A opcao selecionada nao eh valida.\n");
   }
-
   return 0;
 }

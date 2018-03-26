@@ -36,7 +36,7 @@ int main() {
   }
   else {
     raizes = (-b + sqrt(delta)) / 2*a; // calcula a primeira raiz
-    printf("As raizes da equacao sao %.2f", raizes);
+    printf("As raizes da equacao sao %.2f e ", raizes);
     raizes = (-b - sqrt(delta)) / 2*a; // calcula a segunda raiz
     printf("%.2f\n", raizes);
   }

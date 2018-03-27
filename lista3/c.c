@@ -25,13 +25,13 @@ int main() {
   printf("Entre com o saldo medio: ");
   scanf("%f", &saldo_medio);
   if (saldo_medio <= LIMITE_INFERIOR) // faixa 1: credito é 10% do saldo_medio
-    printf("Seu credito eh: %.2f\n", saldo_medio * 0.1);
+    printf("Seu credito eh: %.2f e seu saldo medio eh: %.2f\n", saldo_medio * 0.1, saldo_medio);
   else if (saldo_medio > LIMITE_INFERIOR && saldo_medio <= LIMITE_MEIO) // faixa 2: credito é 20% do saldo_medio
-    printf("Seu credito eh: %.2f\n", saldo_medio * 0.2);
+    printf("Seu credito eh: %.2f e seu saldo medio eh: %.2f\n", saldo_medio * 0.2, saldo_medio);
   else if (saldo_medio > LIMITE_MEIO && saldo_medio <= LIMITE_SUPERIOR) // faixa 3: credito é 25% do saldo_medio
-    printf("Seu credito eh: %.2f\n", saldo_medio * 0.25);
+    printf("Seu credito eh: %.2f e seu saldo medio eh: %.2f\n", saldo_medio * 0.25, saldo_medio);
   else if (saldo_medio > LIMITE_SUPERIOR) // faixa 4: credito é 30% do saldo_medio
-    printf("Seu credito eh: %.2f\n", saldo_medio * 0.3);
+    printf("Seu credito eh: %.2f e seu saldo medio eh: %.2f\n", saldo_medio * 0.3, saldo_medio);
   else
     printf("Entre com dados validos\n");
   return 0;

@@ -17,7 +17,5 @@ int main() {
   for (int i = 0; i < expoente; i++)
     acumulador *= base;
   printf("O resultado da exponenciacao eh: %.2lf\n", acumulador);
-
-
   return 0;
 }

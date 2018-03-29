@@ -9,22 +9,31 @@ FIM_ALGORITMO
 #include <math.h>
 
 int main() {
-  int A, B;
+  double A, B;
+  int repeticao = 0, i;
   printf("Insira um numero: ");
-  scanf("%d", &A);
+  scanf("%lf", &A);
   printf("Insira outro numero: ");
-  scanf("%d", &B);
+  scanf("%lf", &B);
   if (A > B) {
-    for (int i = 2; i <= B; i++) {
-      if (A % i == 0 && B % i == 0)
+    for (i = 2; i <= B; i++) {
+      if (fmod(A, i) == 0 && fmod(B, i) == 0) {
         printf("Os dois numeros nao sao primos entre si, pois %d divide os dois\n", i);
+        repeticao++;
+        break;
+      }
     }
   }
-  else
+  else {
     for (int i = 2; i <= A; i++) {
-      if (A % i == 0 && B % i == 0)
+      if (fmod(A, i) == 0 && fmod(B, i) == 0) {
         printf("Os dois numeros nao sao primos entre si, pois %d divide os dois\n", i);
+        repeticao++;
+        break;
+      }
     }
-  printf("Os numeros sao primos entre si\n");
+  }
+  if (repeticao == 0)
+    printf("Os numeros sao primos entre si\n");
   return 0;
 }

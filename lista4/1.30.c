@@ -9,10 +9,10 @@ FIM_ALGORITMO
 #include <math.h>
 
 int main() {
-  double acumulador = 1;
-  for (int i = 0; i < 20; i++) {
-    printf("a potencia de dois eh: %0.0lf\n", acumulador);
-    acumulador *= 2;
-  }
+  long double soma = 0;
+  soma += 1;
+  for (int i = 1; i <= 99; i++)
+    soma += pow(-1, i) / (2.0 * i);
+  printf("O resultado eh: %Lf\n", soma);
   return 0;
 }

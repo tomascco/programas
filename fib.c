@@ -13,7 +13,7 @@ int main() {
     antant = ant;
     ant = fib;
   }
-  printf("\nSeu numero eh: %e\n\n", fib);
+  printf("\nSeu numero eh: %0.0lf\n\n", fib);
 
 
 return 0;

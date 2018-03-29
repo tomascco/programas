@@ -4,7 +4,7 @@
 int main() {
   int n, fat = 1, i;
   printf("Insira um numero para calcular seu fatorial: ");
-  scanf("%d", &n );
+  scanf("%d", &n);
   for (i = 1; i <= n; i++) {
     fat *= i;
 }

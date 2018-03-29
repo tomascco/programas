@@ -17,7 +17,5 @@ int main() {
   for (int i = 0; i < num2; i++)
     acumulador += num1;
   printf("O resultado da multiplicacao eh: %.2lf\n", acumulador);
-
-
   return 0;
 }

@@ -22,8 +22,5 @@ int main() {
   }
   printf("O numero de pares eh: %d\n", num_pares);
   printf("O numero de impares eh: %d\n", num_impares);
-
-
-
   return 0;
 }

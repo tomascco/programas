@@ -13,11 +13,9 @@ int main() {
   int n;
   printf("Insira o numero de termos para calcular a soma parcial da serie harmonica: ");
   scanf("%d", &n);
-    for (double i = 1; i <= n; i++) {
-      h += (1 / i);
+    for (int i = 1; i <= n; i++) {
+      h += (1.0 / i);
     }
   printf("A soma parcial eh: %lf\n", h);
-
-
   return 0;
 }

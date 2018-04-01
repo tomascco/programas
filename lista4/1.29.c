@@ -16,6 +16,5 @@ int main() {
   for (int i = 0; i < n; i++)
     soma += (1+i) / (n-i);
   printf("O resultado da soma eh: %lf\n", soma);
-
   return 0;
 }

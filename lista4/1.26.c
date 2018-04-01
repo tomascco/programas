@@ -9,20 +9,16 @@ FIM_ALGORITMO
 #include <math.h>
 
 int main() {
-  int quant_termos, numero_rep = 4, numero_3 = 2;
+  int quant_termos, numero_rep = 3, numero_3 = 1;
   printf("Insira a quantidade de termos para gerar a sequencia\n");
   scanf("%d", &quant_termos);
-  printf("O termo 1 eh: 1\n");
-  if (quant_termos > 1) {
-    for (int i = 1; i <= quant_termos; i++) {
+    for (int i = 0; i < quant_termos; i++) {
       if (i % 3 == 0) {
-        printf("O termo %d eh: %d\n", i + 1, numero_3);
-        numero_3++;
+        printf("O termo %d eh: %d\n", i + 1, numero_3++);
         numero_rep++;
       }
       else
         printf("O termo %d eh: %d\n", i + 1, numero_rep);
     }
-  }
 return 0;
 }

@@ -14,7 +14,7 @@ int main() {
   scanf("%lf", &base);
   printf("Insira seu fator: ");
   scanf("%lf", &expoente);
-  for (int i = 0; i < expoente; i++)
+  for (int i = 1; i <= expoente; i++)
     acumulador *= base;
   printf("O resultado da exponenciacao eh: %.2lf\n", acumulador);
   return 0;

@@ -12,7 +12,7 @@ int main() {
   int n, num_pares = 0, num_impares = 0, num_atual; // n é o numero de valores a serem considerados
   printf("Digite quantos numeros serao classificados: ");
   scanf("%d", &n);
-  for (int i = 0; i < n; i++) {
+  for (int i = 1; i <= n; i++) {
     printf("\nInsira o numero: ");
     scanf("%d", &num_atual);
     if (num_atual % 2 == 0)

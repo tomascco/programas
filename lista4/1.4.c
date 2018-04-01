@@ -13,6 +13,6 @@ int main() {
   printf("Digite o numero de potencias de 2 que voce quer: ");
   scanf("%d", &n);
   for (int i = 0; i < n; i++)
-    printf("a potencia de dois eh: %0.0lf\n", pow(2, i));
+    printf("a potencia de dois eh: %d\n", 1 << i);
   return 0;
 }

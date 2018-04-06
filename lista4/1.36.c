@@ -17,7 +17,7 @@ int main() {
     den *= i;
   }
   soma += den;
-  printf("O termo 1 eh: %lf\n", den);
+  printf("O termo 1 eh: %lf\n", soma);
   for (j = 0; j < 2*x; j+=2) {
     den /= (x - (j/2));
     alternador *= -1;

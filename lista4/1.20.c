@@ -9,17 +9,19 @@ FIM_ALGORITMO
 #include <math.h>
 
 int main() {
-  int quant_primos, primos_encontrados = 0, i, numero_atual = 3, divisores;
+  int quant_primos, primos_encontrados = 0, i, numero_atual = 3, eh_primo;
   printf("Insira a quantidade de primos a serem gerados: ");
   scanf("%d", &quant_primos);
   printf("2 eh primo\n");
     while (primos_encontrados < quant_primos - 1) {
-      divisores = 0;
-      for (i = 2; i < numero_atual; i++) {
-        if (numero_atual % i == 0)
-            divisores++;
+      eh_primo = 1;
+      for (i = 2; i < numero_atual/2; i+=2) {
+        if (numero_atual % i == 0) {
+            eh_primo = 0;
+            break;
+        }
       }
-      if (divisores == 0) {
+      if (eh_primo) {
         primos_encontrados++;
         printf("%d eh primo\n", numero_atual);
       }

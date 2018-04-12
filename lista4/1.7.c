@@ -13,8 +13,8 @@ FIM_ALGORITMO
 int main() {
   double posicao_tartaruga = 100, posicao_aquiles = 0, tempo_corrido = 0;
   while (posicao_aquiles < posicao_tartaruga) {
-    posicao_tartaruga = posicao_tartaruga + VELOCIDADE_TARTARUGA * PASSO_TEMPO;
-    posicao_aquiles = posicao_aquiles + VELOCIDADE_AQUILES * PASSO_TEMPO;
+    posicao_tartaruga += VELOCIDADE_TARTARUGA * PASSO_TEMPO;
+    posicao_aquiles += VELOCIDADE_AQUILES * PASSO_TEMPO;
     tempo_corrido += PASSO_TEMPO;
   }
   printf("O tempo que Aquiles demorou foi: %lf\n", tempo_corrido);

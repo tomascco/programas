@@ -1,17 +1,5 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-10
-39
-23
-1
-6
-3
-19
-33
-37
-22
-13
-
 */
 #include <stdio.h>
 #include <math.h>

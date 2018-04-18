@@ -1,12 +1,8 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-
-ALGORITMO
-
-FIM_ALGORITMO
 */
+
 #include <stdio.h>
-#include <math.h>
 
 int main() {
   int sum, cases, x, y, i;

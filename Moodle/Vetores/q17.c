@@ -1,18 +1,11 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-Problema: [vet] L3 - Batida Policial - Ordenando vetores
+Problema: [vet] L4 - Se fosse a mediana eu tinha passado!
 */
 
 #include <stdio.h>
-#include <math.h>
 
-void troca_variavel(int a, int b) {
-  a = a + b;
-  b = a - b;
-  a = a - b;
-}
-
-void bubble_sort(int n, int v[]) {
+void bubble_sort(int n, float v[]) {
    int trocou;
    do {
      trocou = 0;
@@ -31,15 +24,13 @@ void bubble_sort(int n, int v[]) {
 int main() {
   int n;
   scanf("%d", &n);
-  int v[n];
+  float notas[n];
   for (int i = 0; i < n; i++)
-    scanf("%d", &v[i]);
-  bubble_sort(n, v);
-  for (int i = 0; i < n; i++)
-    printf("%d ", v[i]);
+    scanf("%f", &notas[i]);
+  bubble_sort(n, notas);
+  if (n % 2 == 1)
+    printf("%.2f", notas[n/2]);
+  else
+    printf("%.2f", (notas[(n-1)/2] + notas[(n-1)/2 + 1]) / 2);
   return 0;
-  int a = 5, b = 6;
-  printf("\n a = %d b = %d", a, b);
-  troca_variavel(a, b);
-  printf("\n a = %d b = %d", a, b);
 }

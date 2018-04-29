@@ -1,16 +1,8 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-Problema: [vet] L3 - Batida Policial - Ordenando vetores
 */
 
 #include <stdio.h>
-#include <math.h>
-
-void troca_variavel(int a, int b) {
-  a = a + b;
-  b = a - b;
-  a = a - b;
-}
 
 void bubble_sort(int n, int v[]) {
    int trocou;
@@ -29,17 +21,15 @@ void bubble_sort(int n, int v[]) {
 }
 
 int main() {
-  int n;
+  int n, elemento_atual;
   scanf("%d", &n);
   int v[n];
   for (int i = 0; i < n; i++)
     scanf("%d", &v[i]);
   bubble_sort(n, v);
-  for (int i = 0; i < n; i++)
-    printf("%d ", v[i]);
+  for (int i = 0; i < n; i++) {
+    elemento_atual = v[i];
+    if (v[i] == v[i+1])
+  }
   return 0;
-  int a = 5, b = 6;
-  printf("\n a = %d b = %d", a, b);
-  troca_variavel(a, b);
-  printf("\n a = %d b = %d", a, b);
 }

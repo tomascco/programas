@@ -1,8 +1,15 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
+Problema: [vet] L3 - Zoologico Um animal de cada tipo!
 */
 
 #include <stdio.h>
+
+void troca_valor(int* a, int* b) {
+  *a = *a + *b;
+  *b = *a - *b;
+  *a = *a - *b;
+}
 
 void bubble_sort(int n, int v[]) {
    int trocou;
@@ -10,9 +17,7 @@ void bubble_sort(int n, int v[]) {
      trocou = 0;
      for (int i = 0; i < (n-1); i++) {
        if (v[i] > v[i+1]) { // troca das posições das variáveis
-         v[i] = v[i] + v[i+1];
-         v[i+1] = v[i] - v[i+1];
-         v[i] = v[i] - v[i+1];
+         troca_valor(&v[i], &v[i+1]);
          trocou++;
        }
      }
@@ -21,15 +26,15 @@ void bubble_sort(int n, int v[]) {
 }
 
 int main() {
-  int n, elemento_atual;
+  int n;
   scanf("%d", &n);
   int v[n];
   for (int i = 0; i < n; i++)
     scanf("%d", &v[i]);
   bubble_sort(n, v);
   for (int i = 0; i < n; i++) {
-    elemento_atual = v[i];
-    if (v[i] == v[i+1])
+    if (v[i] != v[i+1])
+      printf("%d ", v[i]);
   }
   return 0;
 }

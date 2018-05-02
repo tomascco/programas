@@ -34,7 +34,7 @@ int main() {
       if (k == n-1)
         printf("%d", v[k]);
       else
-      printf("%d ", v[k]);
+        printf("%d ", v[k]);
     if (i != casos_teste-1)
       printf("\n");
   }

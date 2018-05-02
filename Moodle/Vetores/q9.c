@@ -16,6 +16,7 @@ int main() {
     scanf("%f", &chute_preco[i]);
   for (int i = 0; i < quant_prod; i++)
     scanf(" %c", &chute[i]);
+
   for (int i = 0; i < quant_prod; i++) {
     if (preco[i] == chute_preco[i])
       pont_pri++;

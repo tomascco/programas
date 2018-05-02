@@ -5,15 +5,19 @@ Problema: [vet] L4 - Se fosse a mediana eu tinha passado!
 
 #include <stdio.h>
 
+void troca_valor(float* a, float* b) {
+  *a = *a + *b;
+  *b = *a - *b;
+  *a = *a - *b;
+}
+
 void bubble_sort(int n, float v[]) {
    int trocou;
    do {
      trocou = 0;
      for (int i = 0; i < (n-1); i++) {
        if (v[i] > v[i+1]) { // troca das posições das variáveis
-         v[i] = v[i] + v[i+1];
-         v[i+1] = v[i] - v[i+1];
-         v[i] = v[i] - v[i+1];
+         troca_valor(&v[i], &v[i+1]);
          trocou++;
        }
      }

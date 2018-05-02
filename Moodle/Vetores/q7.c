@@ -6,10 +6,10 @@ Problema: [vet] L3 - Batida Policial - Ordenando vetores
 #include <stdio.h>
 #include <math.h>
 
-void troca_variavel(int a, int b) {
-  a = a + b;
-  b = a - b;
-  a = a - b;
+void troca_valor(int* a, int* b) {
+  *a = *a + *b;
+  *b = *a - *b;
+  *a = *a - *b;
 }
 
 void bubble_sort(int n, int v[]) {
@@ -18,9 +18,7 @@ void bubble_sort(int n, int v[]) {
      trocou = 0;
      for (int i = 0; i < (n-1); i++) {
        if (v[i] > v[i+1]) { // troca das posições das variáveis
-         v[i] = v[i] + v[i+1];
-         v[i+1] = v[i] - v[i+1];
-         v[i] = v[i] - v[i+1];
+         troca_valor(&v[i], &v[i+1]);
          trocou++;
        }
      }
@@ -38,8 +36,4 @@ int main() {
   for (int i = 0; i < n; i++)
     printf("%d ", v[i]);
   return 0;
-  int a = 5, b = 6;
-  printf("\n a = %d b = %d", a, b);
-  troca_variavel(a, b);
-  printf("\n a = %d b = %d", a, b);
 }

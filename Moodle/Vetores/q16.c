@@ -31,8 +31,11 @@ int main() {
     if (fig_atual != fig[i])
       fig_atual = fig[i];
     else {
+      if (troca)
+        printf("%d", fig_atual);
+      else
+        printf(" %d", fig_atual);
       troca = 0;
-      printf("%d ", fig_atual);
     }
   }
   if (troca)
@@ -40,8 +43,11 @@ int main() {
   printf("\n");
   for (int i = 0; i < album; i++) {
     if (procura_elemento(quant_fig, fig, album_completo[i]) == -1) {
-       completo = 0;
-      printf("%d ", album_completo[i]);
+      if (completo)
+        printf("%d", album_completo[i]);
+      else
+        printf(" %d", album_completo[i]);
+      completo = 0;
     }
   }
   if (completo)

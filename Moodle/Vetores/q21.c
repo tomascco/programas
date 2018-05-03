@@ -1,38 +1,33 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-Problema: [vet] L4 - Coleção de Tazos - Quantos se repetem mais
+Problema: [vet] L3 - Cabeças vão rolar
 */
 
 #include <stdio.h>
 
+int vencedor(int n_pessoas) {
+  if (n_pessoas == 1)
+    return 1;
+  else if (n_pessoas % 2 == 0)
+    return 2 * vencedor(n_pessoas / 2) - 1;
+  else if (n_pessoas % 2 == 1)
+    return 2 * vencedor((n_pessoas-1) / 2) + 1;
+  else
+    return -1;
+}
+
+int rotacao_circular(int n_elem, int pos, int quant_rot) {
+  for (int i = 0; i < quant_rot; i++) {
+    pos++;
+    if (pos == n_elem+1)
+      pos = 1;
+  }
+  return pos;
+}
+
 int main() {
-  int n_ele, rep, maior_rep = 0;
-  scanf("%d", &n_ele);
-  int tazos[2][n_ele]; // primeira linha recebe o vetor
-  for (int i = 0; i < n_ele; i++) // segunda linha guarda o n de repeticoes
-    scanf("%d", &tazos[0][i]);
-
-  for (int i = 0; i < n_ele; i++)
-    tazos[1][i] = 0;
-
-  for (int i = 0; i < n_ele;) {
-    rep = 0;
-    while (tazos[0][i] == tazos[0][i+rep]) {
-      if (i + rep+1 > n_ele) // grrrrrr
-        break;
-      rep++;
-    }
-    tazos[1][i] = rep;
-    i += rep;
-  }
-
-  for (int i = 0; i < n_ele; i++) {
-    if (tazos[1][i] > maior_rep)
-      maior_rep = tazos[1][i];
-  }
-  for (int i = 0; i < n_ele; i++) {
-    if (maior_rep == tazos[1][i])
-      printf("%d ", tazos[0][i]);
-  }
+  int n, x;
+  scanf("%d %d", &n, &x);
+  printf("%d", rotacao_circular(n, vencedor(n), x-1));
   return 0;
 }

@@ -16,18 +16,10 @@ int vencedor(int n_pessoas) {
     return -1;
 }
 
-int rotacao_circular(int n_elem, int pos, int quant_rot) {
-  for (int i = 0; i < quant_rot; i++) {
-    pos++;
-    if (pos == n_elem+1)
-      pos = 1;
-  }
-  return pos;
-}
 
 int main() {
   int n, x;
   scanf("%d %d", &n, &x);
-  printf("%d", rotacao_circular(n, vencedor(n), x-1));
+    printf("%d", (vencedor(n)-1 + (x-1)) % n + 1);
   return 0;
 }

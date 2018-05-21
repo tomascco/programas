@@ -19,13 +19,16 @@ int checa_elemento(char letra, char string[]) { // dada uma string e um simbolo,
 }
 
 int main() {
-  char frase[50], vogais[] = "aeiou";
+  char frase[50], vogais[] = "aeiouAEIOU";
   nscanf(frase, 50);
   for (int i = 0; frase[i] != '\0'; i++) {
-    if (isalpha(texto[i]))
+    if (isalpha(frase[i])) {
+      if (checa_elemento(frase[i], vogais))
+        frase[i] = 'v';
+      else
+        frase[i] = 'c';
+    }
  }
-
-
-
-
+ printf("%s", frase);
+ return 0;
 }

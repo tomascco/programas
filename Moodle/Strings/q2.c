@@ -5,16 +5,16 @@ Problema: [char] L1 - Valdiskey e a cifra V1!
 
 #include <stdio.h>
 
+char rotaciona(char letra, int rotacao) {
+  char resultado;
+  resultado = (letra + rotacao - 97) % 26;
+  return resultado < 0 ? resultado + 26 + 97 : resultado + 97;
+  }
+
 int main() {
   char letra;
-  int rotacao, posicao;
-  // posicao é a posição da letra numa lista circular
-  // considerando a = 0, b = 1, etc.
+  int rotacao;
   scanf("%c %d", &letra, &rotacao);
-  posicao = letra + rotacao - 97;
-  letra = posicao % 26 + 97;
-  if (posicao < 0)
-    letra += 26; // o +26 faz o % ficar com o comportamento esperado
-  printf("%c", letra);
+  printf("%c", rotaciona(letra, rotacao));
   return 0;
 }

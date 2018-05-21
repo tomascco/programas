@@ -7,12 +7,9 @@ Problema: [char] L1 - Maiúsculo, Minusculo e Dígito!
 #include <ctype.h>
 
 int main() {
-  char carac;
-  scanf("%c", &carac);
-  if (isupper(carac))
-    carac = tolower(carac);
-  else if (islower(carac))
-    carac = toupper(carac);
+  char carac = fgetc(stdin);
+  if (isalpha(carac))
+    carac = islower(carac) ? toupper(carac): tolower(carac);
   printf("%c", carac);
   return 0;
 }

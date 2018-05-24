@@ -1,10 +1,10 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-Problema: [str] L2 - Gagueira V1 - Duplicar Palavras
+Problema: [str] L2 - Avestruz com Alcaparras - Contar Maiusculas e Minusculas!
 */
 
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 
 int nscanf(char string[], int n) { // recebe uma string ate o primeiro \n.
   int i = 0;
@@ -15,11 +15,16 @@ int nscanf(char string[], int n) { // recebe uma string ate o primeiro \n.
 }
 
 int main() {
-  char frase[100];
+  char frase[100], letra;
+  int cont = 0;
   nscanf(frase, 100);
+  letra = tolower(fgetc(stdin));
 
-  for (char *p = strtok(frase, " "); p != NULL; p = strtok(NULL, " ")) // sepera as palavras
-    printf("%s %s ", p, p);
+  for (int i = 0; frase[i] != '\0'; i++) {
+    if (tolower(frase[i]) == letra)
+      cont++;
+  }
 
+  printf("%d", cont);
   return 0;
 }

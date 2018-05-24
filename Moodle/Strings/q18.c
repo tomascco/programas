@@ -1,10 +1,9 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-Problema: [str] L2 - Gagueira V1 - Duplicar Palavras
+Problema: [str] L3 - Francês é Fresco - Juntar palavras
 */
 
 #include <stdio.h>
-#include <string.h>
 
 int nscanf(char string[], int n) { // recebe uma string ate o primeiro \n.
   int i = 0;
@@ -15,11 +14,13 @@ int nscanf(char string[], int n) { // recebe uma string ate o primeiro \n.
 }
 
 int main() {
-  char frase[100];
-  nscanf(frase, 100);
-
-  for (char *p = strtok(frase, " "); p != NULL; p = strtok(NULL, " ")) // sepera as palavras
-    printf("%s %s ", p, p);
-
+  char frase[50];
+  int tam_frase;
+  tam_frase = nscanf(frase, 50);
+  for (int i = 0; i < tam_frase; i++) {
+    while (frase[i] == ' ' && frase[i-1] == frase[i+1])
+      i += 2;
+    fputc(frase[i], stdout);
+  }
   return 0;
 }

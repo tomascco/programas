@@ -9,7 +9,7 @@ Problema: [char] L1 - Maiúsculo, Minusculo e Dígito!
 int main() {
   char carac = fgetc(stdin);
   if (isalpha(carac))
-    carac = islower(carac) ? toupper(carac): tolower(carac);
+    carac = islower(carac) ? toupper(carac) : tolower(carac);
   printf("%c", carac);
   return 0;
 }

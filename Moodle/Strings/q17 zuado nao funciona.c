@@ -25,6 +25,6 @@ int checa_sequencia(char letra, char string[]) { // dada uma string e um simbolo
 
 int main() {
   int casos_teste;
-  
+
   return 0;
 }

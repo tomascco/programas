@@ -1,10 +1,9 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
-Problema: [str] L4 - Conversa de Traficantes - Substituições de substrings
+Problema:
 */
 
 #include <stdio.h>
-#include <string.h>
 
 int nscanf(char string[], int n) { // recebe uma string ate o primeiro \n.
   int i = 0;
@@ -15,13 +14,16 @@ int nscanf(char string[], int n) { // recebe uma string ate o primeiro \n.
 }
 
 int main() {
-  char texto[40] = "", palavra[20] = "", substituicao[10] = "";
-  int tam_palavra;
-  nscanf(texto, 40);
-  tam_palavra = nscanf(palavra, 20);
-  nscanf(substituicao, 10);
+  int tam_palavra, palindromo = 1;
+  char palavra[15] = "";
+  tam_palavra = nscanf(palavra, 15);
 
-  
-
+  for (int i = 0; i < tam_palavra / 2; i++) {
+    if (palavra[i] != palavra[tam_palavra - i - 1]) {
+      palindromo = 0;
+      break;
+    }
+  }
+  fputc(palindromo + '0', stdout);
   return 0;
 }

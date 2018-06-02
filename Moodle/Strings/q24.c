@@ -1,11 +1,6 @@
 /*
 Autor: Tomás de Carvalho Coelho, Eng comp, 418391
 Problema: [str] L2 - Contar Leds
-3
-115380
-2819311
-23456
-
 */
 
 #include <stdio.h>

@@ -9,7 +9,7 @@ void exibe_filas(int n, int v[]) {
   for (int a = 1; a >= 0; a--) {
     for (int i = 0; i < n; i++) {
       if (v[i] % 2 == a)
-        printf("%d ", v[i]);
+        printf("%d ", v[i]);1
     }
     if (a == 1)
       printf("\n");
